@@ -1,9 +1,9 @@
 # Vue-Auth
 
-Creating a full website with Node and Vue
+Creating a basic website with Node.js and Vue.js
 
 ## Setup Node.js server
-Set up a Node.js server that will handle authentication for us. For our Node.js server, we will use SQLite as the database of choice.
+First set up a Node.js server that will handle authentication for us. For our Node.js server, we will use SQLite as the database of choice.
 
 Run the following command to install SQLite driver:
 ```shell
@@ -24,3 +24,8 @@ To read json data, we will send to our server, we need body-parser. Run the foll
 ```shell
 $ npm install --save body-parser
 ```
+
+#### Source
+    * [Sqlite](https://github.com/kriasoft/node-sqlite)
+    * [Sqlite3](https://github.com/mapbox/node-sqlite3)
+    * [Express Server](https://github.com/expressjs/express)
