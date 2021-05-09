@@ -2,6 +2,6 @@
     Config file
 */
 
-export default {
+module.exports = {
     'secret': 'supersecret'
 };

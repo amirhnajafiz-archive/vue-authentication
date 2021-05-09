@@ -14,21 +14,21 @@
 
 // Modules importing
 "use strict";
-import express, { Router } from 'express'; // Express server and server router
-import DB from './db'; // SQLite database
-import { secret } from './config';
-import { hashSync, compareSync } from 'bcrypt'; // Using the Bcrypt to encode the passwords
-import { sign } from 'jsonwebtoken';
-import { urlencoded, json } from 'body-parser';
+const express = require('express');
+const DB = require('./db');
+const config = require('./config');
+const bcrypt = require('bcrypt');
+const jwt = require('jsonwebtoken');
+const bodyParser = require('body-parser');
 
 
 // Initializations
 const db = new DB("sqlitedb")
 const app = express();
-const router = Router();
+const router = express.Router();
 
-router.use(urlencoded({ extended: false }));
-router.use(json());
+router.use(bodyParser.urlencoded({ extended: false }));
+router.use(bodyParser.json());
 
 
 // CORS middleware
