@@ -26,10 +26,10 @@ $ npm install --save body-parser
 ```
 
 #### Source
-    * [Sqlite](https://github.com/kriasoft/node-sqlite)
-    * [Sqlite3](https://github.com/mapbox/node-sqlite3)
-    * [Express Server](https://github.com/expressjs/express)
-    * [Bcrypt](https://github.com/kelektiv/node.bcrypt.js)
+   * [Sqlite](https://github.com/kriasoft/node-sqlite)
+   * [Sqlite3](https://github.com/mapbox/node-sqlite3)
+   * [Express Server](https://github.com/expressjs/express)
+   * [Bcrypt](https://github.com/kelektiv/node.bcrypt.js)
 
 #### Guides
-    * [What is CORS ?](https://auth0.com/blog/cors-tutorial-a-guide-to-cross-origin-resource-sharing/)
+   * [What is CORS ?](https://auth0.com/blog/cors-tutorial-a-guide-to-cross-origin-resource-sharing/)
