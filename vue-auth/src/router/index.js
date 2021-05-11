@@ -81,6 +81,7 @@ router.beforeEach((to, from, next) => {
   } else {
     next()
   }
+  this.$store.commit('UPDATE_USER', localStorage.getItem('jwt'))
 })
 
 export default router
