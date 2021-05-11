@@ -33,3 +33,24 @@ $ npm install --save body-parser
 
 #### Guides
    * [What is CORS ?](https://auth0.com/blog/cors-tutorial-a-guide-to-cross-origin-resource-sharing/)
+
+
+#### Todo
+<ul>
+   <li>Navigation</li>
+   <li>User information</li>
+   <li>Log out</li>
+   <li>Components layout</li>
+   <li>Set the basics for card creating</li>
+   <li>Method for saving cards into database</li>
+   <li>Get users cards from database and show them in front</li>
+   <li>Errors and exception handling</li>
+</ul>
+
+#### Doing
+<ul>
+</ul>
+
+#### Done
+<ul>
+</ul>
