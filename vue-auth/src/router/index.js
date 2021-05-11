@@ -5,6 +5,7 @@ import Login from '@/components/Login'
 import Register from '@/components/Register'
 import UserBoard from '@/components/UserBoard'
 import Admin from '@/components/Admin'
+import store from '../store'
 
 /* Defining out routers */
 let router = new Router({
@@ -81,7 +82,7 @@ router.beforeEach((to, from, next) => {
   } else {
     next()
   }
-  this.$store.commit('UPDATE_USER', localStorage.getItem('jwt'))
+  store.commit('UPDATE_USER', localStorage.getItem('jwt'))
 })
 
 export default router

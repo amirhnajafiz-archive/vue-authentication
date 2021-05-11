@@ -7,12 +7,13 @@
             <a @click="navigate" role="link">Home</a>
           </router-link>
         </div>
-        <div :class="['nav-boxing', { active: currentRouteName == '/login' }]">
+        <div v-if="this.$store.getters.isLoggedin" :class="['nav-boxing', { active: currentRouteName == '/login' }]">
           <router-link to="/login" custom v-slot="{ navigate }">
             <a @click="navigate" role="link">Login</a>
           </router-link>
         </div>
         <div
+          v-if="this.$store.getters.isLoggedin"
           :class="['nav-boxing', { active: currentRouteName == '/register' }]"
         >
           <router-link to="/register" custom v-slot="{ navigate }">
@@ -20,6 +21,7 @@
           </router-link>
         </div>
         <div
+          v-if="!this.$store.getters.isLoggedin"
           :class="['nav-boxing', { active: currentRouteName == '/dashboard' }]"
         >
           <router-link to="/dashboard" custom v-slot="{ navigate }">

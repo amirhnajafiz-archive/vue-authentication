@@ -1,1 +1,1 @@
-export const UPDATE_USER = null;
+export const UPDATE_USER = 'UPDATE_USER';

@@ -5,10 +5,7 @@ import App from './App'
 import VueRouter from 'vue-router'
 import router from './router'
 import Axios from 'axios'
-import Vuex from 'vuex'
 import store from './store'
-
-Vue.use(Vuex)
 
 Vue.prototype.$http = Axios
 
