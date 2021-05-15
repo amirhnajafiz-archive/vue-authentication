@@ -7,16 +7,23 @@ Vue.use(Vuex)
 
 export default new Vuex.Store({
       state: {
-        user: {} 
+        user: {},
+        usr_jwt: null
       },
       getters: {
         isLoggedin: state => {
-          return state.user == null;
+          return state.usr_jwt == null;
         }
       },
       mutations: {
-        [types.UPDATE_USER](state, user) {
-          state.user = user
+        [types.UPDATE_USER](state, usr_jwt) {
+          state.usr_jwt = usr_jwt
+        },
+        [types.REMOVE_USER](state) {
+          localStorage.removeItem('jwt'); 
+          state.user = {};
+          state.usr_jwt = null;
+          console.log(localStorage.getItem('user'));
         }
       },
       actions: {

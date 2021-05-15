@@ -28,6 +28,9 @@
             <a @click="navigate" role="link">Dashboard</a>
           </router-link>
         </div>
+        <div v-if="!this.$store.getters.isLoggedin">
+          <button @click="logUserOut">Log out</button>
+        </div>
       </div>
     </nav>
   </div>
@@ -40,6 +43,13 @@ export default {
     currentRouteName() {
       return this.$route.path;
     },
+  },
+  methods: {
+    logUserOut()
+    {
+      this.$store.commit('REMOVE_USER');
+      console.log('User logged out');
+    }
   }
 };
 </script>
