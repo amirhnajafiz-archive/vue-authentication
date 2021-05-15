@@ -13,14 +13,13 @@ export default {
     return {
       msg: "The commoners",
       username: undefined,
-      email: undefined
+      email: undefined,
     };
   },
-  mounted()
-  {
+  mounted() {
     this.username = this.$store.getters.getUserName;
     this.email = this.$store.getters.getUserEmail;
-  }
+  },
 };
 </script>
 

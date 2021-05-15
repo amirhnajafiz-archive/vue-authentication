@@ -7,7 +7,10 @@
             <a @click="navigate" role="link">Home</a>
           </router-link>
         </div>
-        <div v-if="this.$store.getters.isLoggedin" :class="['nav-boxing', { active: currentRouteName == '/login' }]">
+        <div
+          v-if="this.$store.getters.isLoggedin"
+          :class="['nav-boxing', { active: currentRouteName == '/login' }]"
+        >
           <router-link to="/login" custom v-slot="{ navigate }">
             <a @click="navigate" role="link">Login</a>
           </router-link>
@@ -29,7 +32,9 @@
           </router-link>
         </div>
         <div v-if="!this.$store.getters.isLoggedin">
-          <button @click="logUserOut" type="button" class="btn btn-danger">Log out</button>
+          <button @click="logUserOut" type="button" class="btn btn-danger">
+            Log out
+          </button>
         </div>
       </div>
     </nav>
@@ -45,13 +50,12 @@ export default {
     },
   },
   methods: {
-    logUserOut()
-    {
-      this.$store.commit('REMOVE_USER');
-      console.log('User logged out');
-      this.$router.push('/login');
-    }
-  }
+    logUserOut() {
+      this.$store.commit("REMOVE_USER");
+      console.log("User logged out");
+      this.$router.push("/login");
+    },
+  },
 };
 </script>
 
