@@ -49,6 +49,7 @@ export default {
     {
       this.$store.commit('REMOVE_USER');
       console.log('User logged out');
+      this.$router.push('/login');
     }
   }
 };
