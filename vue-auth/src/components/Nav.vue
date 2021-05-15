@@ -29,7 +29,7 @@
           </router-link>
         </div>
         <div v-if="!this.$store.getters.isLoggedin">
-          <button @click="logUserOut">Log out</button>
+          <button @click="logUserOut" type="button" class="btn btn-danger">Log out</button>
         </div>
       </div>
     </nav>
@@ -67,6 +67,7 @@ export default {
   border-radius: 2px;
   color: #ffffff;
 }
+
 .active {
   background-color: #ffffff;
   color: #000000;
