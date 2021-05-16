@@ -44,9 +44,6 @@
             Log out
           </button>
         </div>
-        <div v-if="admin_in" class="nav-boxing">
-          <span>Welcome Admin</span>
-        </div>
       </div>
     </nav>
   </div>
