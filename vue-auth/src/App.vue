@@ -7,7 +7,7 @@
 </template>
 
 <script>
-import navbar from './components/Nav'
+import navbar from './components/Base/Nav'
 
 export default {
   name: "App",

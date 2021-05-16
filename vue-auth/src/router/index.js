@@ -1,9 +1,9 @@
 import Router from 'vue-router'
-import HelloWorld from '@/components/HelloWorld'
-import Login from '@/components/Login'
-import Register from '@/components/Register'
-import UserBoard from '@/components/UserBoard'
-import Admin from '@/components/Admin'
+import HelloWorld from '@/components/Base/HelloWorld'
+import Login from '@/components/Login/Login'
+import Register from '@/components/Register/Register'
+import UserBoard from '@/components/User/UserBoard'
+import Admin from '@/components/Admin/Admin'
 import store from '../store'
 
 /* Defining out routers */

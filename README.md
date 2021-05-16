@@ -37,10 +37,6 @@ $ npm install --save body-parser
 
 #### Todo
 <ul>
-   <li>Navigation</li>
-   <li>User information</li>
-   <li>Log out</li>
-   <li>Components layout</li>
    <li>Set the basics for card creating</li>
    <li>Method for saving cards into database</li>
    <li>Get users cards from database and show them in front</li>
@@ -49,8 +45,12 @@ $ npm install --save body-parser
 
 #### Doing
 <ul>
+   <li>Components layout</li>
 </ul>
 
 #### Done
 <ul>
+   <li>Navigation</li>
+   <li>User information</li>
+   <li>Log out</li>
 </ul>
