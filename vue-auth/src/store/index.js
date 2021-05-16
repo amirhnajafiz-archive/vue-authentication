@@ -15,22 +15,25 @@ export default new Vuex.Store({
       return state.usr_jwt == null;
     },
     getUserName: state => {
-      return JSON.parse(localStorage.getItem('user')).name;
+      return state.user.name;
     },
     getUserEmail: state => {
-      return JSON.parse(localStorage.getItem('user')).email;
+      return state.user.email;
     },
     getAdminStatus: state => {
-      return JSON.parse(localStorage.getItem('user')).is_admin;
+      return state.user.is_admin;
     }
   },
   mutations: {
-    [types.UPDATE_USER](state, usr_jwt) {
-      state.usr_jwt = usr_jwt;
+    [types.UPDATE_USER](state) {
+      state.usr_jwt = localStorage.getItem('jwt');
+      state.user = JSON.parse(localStorage.getItem('user'));
+      if (!this.getters.isLoggedin)
+        this.REMOVE_USER;
     },
     [types.REMOVE_USER](state) {
       localStorage.removeItem('jwt');
-      state.user = {};
+      state.user = undefined;
       state.usr_jwt = null;
       console.log(localStorage.getItem('user'));
     }
