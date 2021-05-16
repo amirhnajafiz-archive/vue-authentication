@@ -2,6 +2,8 @@
   <div class="hello">
     <h1>Welcome to administrator page</h1>
     <h2>{{ msg }}</h2>
+    <p>{{ username }}</p>
+    <p>{{ email }}</p>
   </div>
 </template>
 
@@ -10,7 +12,13 @@ export default {
   data() {
     return {
       msg: "The superheros",
+      username: undefined,
+      email: undefined,
     };
+  },
+  mounted() {
+    this.username = this.$store.getters.getUserName;
+    this.email = this.$store.getters.getUserEmail;
   },
 };
 </script>
