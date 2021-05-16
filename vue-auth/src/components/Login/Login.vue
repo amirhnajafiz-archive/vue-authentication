@@ -15,6 +15,9 @@
       <div>
         <button type="submit" @click="handleSubmit">Login</button>
       </div>
+      <div v-if="have_error">
+        {{ error_msg }}
+      </div>
     </form>
   </div>
 </template>
@@ -25,10 +28,14 @@ export default {
     return {
       email: "",
       password: "",
+      have_error: false,
+      error_msg: '',
     };
   },
   methods: {
     handleSubmit(e) {
+      const vm = this;
+      vm.have_error = true;
       e.preventDefault();
       if (this.password.length > 0) {
         this.$http
@@ -55,6 +62,8 @@ export default {
             }
           })
           .catch(function (error) {
+            vm.have_error = true;
+            vm.error_msg = "User " + error.response.statusText;
             console.error(error.response);
           });
       }
